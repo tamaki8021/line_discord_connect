@@ -36,7 +36,7 @@ def push_line(message)
   request.content_type = "application/json"
   request["Authorization"] = "Bearer #{ENV["LINE_CHANNEL_TOKEN"]}"
   request.body = JSON.dump({
-    "to" => "U41176fa522514ad327697f08801e8d32",
+    "to" => "Cced535bc8c75fb0fb9d66d2e8a81c80c",
     "messages" => [
       {
         "type" => "text",
