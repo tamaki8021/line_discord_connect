@@ -34,9 +34,9 @@ def push_line(message)
 
   request = Net::HTTP::Post.new(uri)
   request.content_type = "application/json"
-  request["Authorization"] = "Bearer AccessToken"
+  request["Authorization"] = "Bearer #{ENV["LINE_CHANNEL_TOKEN"]}"
   request.body = JSON.dump({
-    "to" => "userIdもしくはgroupId",
+    "to" => "U41176fa522514ad327697f08801e8d32",
     "messages" => [
       {
         "type" => "text",
