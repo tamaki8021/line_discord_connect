@@ -16,15 +16,12 @@ def client
   }
 end
 
-def add_message(str1, str2)
-  return str1 + str2
-end
 
 bot.command :line do |event|
   bot_message = event.message.content
   bot_message.slice!(0,6)
   event.respond "#{bot_message}"
-  push_line(add_message(event.user.name, bot_message))
+  push_line(bot_message)
 end
 
 
